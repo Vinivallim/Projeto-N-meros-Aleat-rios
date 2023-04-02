@@ -4,29 +4,33 @@ import {Text, View, Button}  from 'react-native'
 
 const gerarNumeroAleatorio=()=>{
 
-    var numero_aleatorio= Math.random();
+    var random_num= Math.random();
 
-    var numero_aleatorio1= Math.random();
+    var random_num1= Math.random();
 
-    var numero_aleatorio2= Math.random();
+    var random_num2= Math.random();
 
-    var numero_aleatorio3= Math.random();
+    var random_num3= Math.random();
 
-    var numero_aleatorio4= Math.random();
+    var random_num4= Math.random();
 
-    numero_aleatorio = Math.floor(numero_aleatorio*101)
+    random_num = Math.floor(random_num*101)
 
-    numero_aleatorio1 = Math.floor(numero_aleatorio1*101)
+    random_num1 = Math.floor(random_num1*101)
 
-    numero_aleatorio2 = Math.floor(numero_aleatorio2*101)
+    random_num2 = Math.floor(random_num2*101)
 
-    numero_aleatorio3 = Math.floor(numero_aleatorio3*101)
+    random_num3 = Math.floor(random_num3*101)
 
-    numero_aleatorio4 = Math.floor(numero_aleatorio4*101)
+    random_num4 = Math.floor(random_num4*101)
 
-    var operacao = numero_aleatorio*numero_aleatorio1+numero_aleatorio2-numero_aleatorio3+numero_aleatorio4
+    var operacao = random_num*random_num1+random_num2-random_num3+random_num4
+    var operacao2 = random_num-random_num1+random_num2*random_num3*random_num4
+    var operacao3 = random_num-random_num1*random_num2-random_num3*random_num4
 
-    alert(numero_aleatorio+"*"+numero_aleatorio1+"+"+numero_aleatorio2+"-"+numero_aleatorio3+"+"+numero_aleatorio4+"="+operacao);
+    alert(random_num+"*"+random_num1+"+"+random_num2+"-"+random_num3+"+"+random_num4+"="+operacao+'\n'
+    +random_num+"-"+random_num1+"+"+random_num2+"*"+random_num3+"*"+random_num4+"="+operacao2+'\n'
+    +random_num+"-"+random_num1+"*"+random_num2+"-"+random_num3+"*"+random_num4+"="+operacao3);
 }
 
 export default ()=>{
@@ -35,8 +39,11 @@ export default ()=>{
     return(
 
         <View>
-            <Text>Gerando e calculando números Aleatórios</Text>
-            <Button
+            <Text style={{textAlign: "center", fontSize: 18, fontWeight: 'bold',}}>Gerando e calculando números Aleatórios</Text>
+            <Text style={{textAlign: "center", fontSize: 14}}>Este App possui um botão que gera 5 números Aleatórios dentro de um range de 0 a 100.</Text>
+            <Text style={{textAlign: "center", fontSize: 14}}>Após serem gerados eles são colocados em 3 calculos envolvendo os 5 números.</Text>
+            <Text style={{textAlign: "center", fontSize: 14}}>Os calculos consistem de somas, subratações e multiplicações.</Text>
+            <Button color="#c7032e"
 
                 title="Gerar e calcular números Aleatórios" 
 
